@@ -11,16 +11,48 @@
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int main(void)
 {
-	ClapTrap clap1 {"Sir Clappington"};
-	ClapTrap clap2;
-	clap1.attack("Pena");
-	clap2.attack("Sir Clappington");
-	clap1.takeDamage(5);
-	clap2.takeDamage(15);
-	clap1.beRepaired(2);
-	clap2.beRepaired(15);
+	std::cout << std::endl;
+	{
+		ClapTrap clap {"Sir Clappington"};
+		clap.attack("Pena");
+		clap.takeDamage(9);
+		clap.beRepaired(2);
+		clap.beRepaired(1);
+		clap.beRepaired(1);
+		clap.beRepaired(1);
+		clap.beRepaired(1);
+		clap.beRepaired(1);
+		clap.beRepaired(1);
+		clap.beRepaired(1);
+		clap.beRepaired(1);
+		clap.beRepaired(1);
+		clap.attack("Pena");
+	}
+	std::cout << std::endl;
+	{
+		ClapTrap clap;
+		clap.attack("Sir Clappington");
+		clap.takeDamage(5);
+		clap.beRepaired(1);
+		clap.attack("Sir Clappington");
+		clap.takeDamage(15);
+		clap.beRepaired(15);
+		clap.attack("Sir Clappington");
+	}
+	std::cout << std::endl;
+	{
+		ScavTrap clap;
+		clap.attack("Sir Clappington");
+		clap.takeDamage(5);
+		clap.beRepaired(1);
+		clap.attack("Sir Clappington");
+		clap.takeDamage(15);
+		clap.beRepaired(15);
+		clap.attack("Sir Clappington");
+	}
 	return (EXIT_SUCCESS);
 }

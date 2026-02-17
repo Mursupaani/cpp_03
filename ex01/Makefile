@@ -1,11 +1,11 @@
 NAME		= ClapTrap
 
 INCL_DIR	= ./incl/
-HPP_FILES	= ClapTrap.hpp
+HPP_FILES	= ClapTrap.hpp ScavTrap.hpp
 INCLS		= $(addprefix $(INCL_DIR), $(HPP_FILES))
 
 SRC_DIR		= ./src/
-CPP_FILES	= main.cpp ClapTrap.cpp
+CPP_FILES	= main.cpp ClapTrap.cpp ScavTrap.cpp
 SRCS		= $(addprefix $(SRC_DIR), $(CPP_FILES))
 
 OBJ_DIR		= ./obj/
