@@ -1,4 +1,4 @@
-NAME		= ClapTrap
+NAME		= ScavTrap
 
 INCL_DIR	= ./incl/
 HPP_FILES	= ClapTrap.hpp ScavTrap.hpp
