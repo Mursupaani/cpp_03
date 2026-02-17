@@ -69,9 +69,11 @@ void ClapTrap::attack(const std::string &target)
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
-	_health -= amount;
-	if (_health < 0)
+	long long tempHP = static_cast<long long>(_health) - amount;
+	if (tempHP < 0)
 		_health = 0;
+	else
+		_health -= amount;
 	std::cout << "ClapTrap " << _name << " takes " << amount
 		<< " damage causing them to drop to " << _health << " health!" << std::endl;
 }
@@ -91,12 +93,14 @@ void ClapTrap::beRepaired(unsigned int amount)
 		return ;
 	}
 	_energy--;
-	_health += amount;
+	long long tempHP = static_cast<long long>(_health) + amount;
 	std::cout << "ClapTrap " << _name << " is repaired by " << amount << "!";
-	if (_health > 10)
+	if (tempHP > 10)
 	{
 		_health = 10;
 		std::cout << " Too bad extra repair is wasted...";
 	}
+	else
+		_health += amount;
 	std::cout << " They now have " << _health << " health!" << std::endl;
 }
