@@ -19,8 +19,10 @@ class ClapTrap
 	protected:
 		std::string _name;
 		int _health;
+		int _maxHealth;
 		int _energy;
 		int _damage;
+		std::string _className;
 	public:
 		ClapTrap(void);
 		ClapTrap(std::string name);
