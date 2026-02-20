@@ -85,17 +85,16 @@ void ScavTrap::attack(const std::string &target)
 	if (_health == 0)
 	{
 		std::cout << _className << " " << _name
-			<< " tried to attaaack but they are dead!" << std::endl;
+			<< " tried to ATTAAACK but they are dead!" << std::endl;
 		return ;
 	}
 	if (_energy == 0)
 	{
 		std::cout << _className << " " << _name
-			<< " tried to attaaack but they are out of energy!" << std::endl;
+			<< " tried to ATTAAACK but they are out of energy!" << std::endl;
 		return ;
 	}
 	_energy--;
-	std::cout << _className << " " << _name << " attaaacks " << target
+	std::cout << _className << " " << _name << " ATTAAACKS " << target
 		<< ", causing " << _damage << " points of damage!" << std::endl;
 }
-

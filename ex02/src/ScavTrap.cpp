@@ -62,6 +62,26 @@ ScavTrap::~ScavTrap(void)
 	std::cout << "ScavTrap destructor called" << std::endl;
 }
 
+void ScavTrap::attack(const std::string &target)
+{
+	if (_health == 0)
+	{
+		std::cout << _className << " " << _name
+			<< " tried to attack but they are dead!" << std::endl;
+		return ;
+	}
+	if (_energy == 0)
+	{
+		std::cout << _className << " " << _name
+			<< " tried to attack but they are out of energy!" << std::endl;
+		return ;
+	}
+	_energy--;
+	std::cout << _className << " " << _name << " attacks " << target
+		<< ", causing " << _damage << " points of damage!" << std::endl;
+}
+
+
 void ScavTrap::guardGate(void)
 {
 	if (_health == 0)

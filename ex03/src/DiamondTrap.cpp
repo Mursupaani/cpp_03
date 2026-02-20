@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
+#include "ScavTrap.hpp"
 
 DiamondTrap::DiamondTrap(void) : ClapTrap()
 {
