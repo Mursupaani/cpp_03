@@ -93,5 +93,14 @@ int main(void)
 		diamond.whoAmI();
 		diamond.attack("Hobo");
 	}
+		std::cout << std::endl;
+	{
+		DiamondTrap diamond2;
+		diamond2.highFiveGuys();
+		diamond2.guardGate();
+		diamond2.whoAmI();
+		diamond2.attack("Hobo");
+
+	}
 	return (EXIT_SUCCESS);
 }
