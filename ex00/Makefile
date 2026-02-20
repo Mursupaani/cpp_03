@@ -31,6 +31,4 @@ fclean: clean
 
 re: fclean all
 
-.SECONDARY: $(OBJS)
-
 .PHONY: clean fclean re

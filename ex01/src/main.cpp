@@ -34,17 +34,6 @@ int main(void)
 	}
 	std::cout << std::endl;
 	{
-		ClapTrap clap;
-		clap.attack("Sir Clappington");
-		clap.takeDamage(5);
-		clap.beRepaired(1);
-		clap.attack("Sir Clappington");
-		clap.takeDamage(15);
-		clap.beRepaired(15);
-		clap.attack("Sir Clappington");
-	}
-	std::cout << std::endl;
-	{
 		ScavTrap clap{"Pekka"};
 		clap.guardGate();
 		clap.attack("Sir Slappington");
@@ -59,6 +48,11 @@ int main(void)
 		}
 		clap.attack("Sir Clappington");
 		clap.guardGate();
+	}
+	std::cout << std::endl;
+	{
+		ScavTrap scav;
+		scav.guardGate();
 	}
 	return (EXIT_SUCCESS);
 }
